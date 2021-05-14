@@ -13,6 +13,7 @@ import { TimesComponent } from './times/times/times.component';
 import { ReplacePipe } from './pipe/replace.pipe';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { ErrorComponent } from './error/error.component';
+import { CourseInfoComponent } from './courses/course-info/course-info.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { ErrorComponent } from './error/error.component';
     TimesComponent,
     ReplacePipe,
     NavBarComponent,
-    ErrorComponent
+    ErrorComponent,
+    CourseInfoComponent
   ],
   imports: [
     BrowserModule,
