@@ -1,0 +1,23 @@
+<h3>Times!</h3>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Escudo</th>
+      <th>Nome</th>
+      <th>Cores</th>
+      <th>Estado</th>
+      <th>Opções</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let time of times">
+      <td><img [src]="time.imagem" width="40" height="40"></td>
+      <td>{{time.nome}}</td>
+      <td>{{time.cores}}</td>
+      <td>{{time.estado}}</td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
