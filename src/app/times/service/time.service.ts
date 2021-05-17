@@ -11,6 +11,12 @@ export class TimeService {
     return Times;
   }
 
+  retrieveById(id: number): Time{
+    return Times.find((timeInterator: Time) => timeInterator.id === id);
+    
+  }
+
+
   constructor(private httpClient: HttpClient) { }
 }
 

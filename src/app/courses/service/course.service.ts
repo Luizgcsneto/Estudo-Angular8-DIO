@@ -15,6 +15,10 @@ retrieveAll(): Course[] {
   return COURSES;
 }
 
+retrieveById(id: number): Course{
+  return COURSES.find((courseInterator: Course) => courseInterator.id === id);
+}
+
   constructor(private httpClient: HttpClient) { }
 }
 

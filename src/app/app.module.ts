@@ -14,6 +14,9 @@ import { ReplacePipe } from './pipe/replace.pipe';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { ErrorComponent } from './error/error.component';
 import { CourseInfoComponent } from './courses/course-info/course-info.component';
+import { InfoComponent } from './times/info/info.component';
+import { BooksComponent } from './books/books.component';
+import { BookInfoComponent } from './books/book-info/book-info.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +27,10 @@ import { CourseInfoComponent } from './courses/course-info/course-info.component
     ReplacePipe,
     NavBarComponent,
     ErrorComponent,
-    CourseInfoComponent
+    CourseInfoComponent,
+    InfoComponent,
+    BooksComponent,
+    BookInfoComponent
   ],
   imports: [
     BrowserModule,
@@ -33,13 +39,25 @@ import { CourseInfoComponent } from './courses/course-info/course-info.component
     HttpClientModule,
     RouterModule.forRoot([
       {
-        path: '',redirectTo: 'courses', pathMatch: 'full'
-      },
-      {
         path: 'courses', component: CourseListComponent
       },
       {
+        path: 'courses/info/:id', component: CourseInfoComponent
+      },
+      {
         path: 'times', component: TimesComponent
+      },
+      {
+        path: 'times/info/:id', component: InfoComponent
+      },
+      {
+        path: 'books', component: BooksComponent
+      },
+      {
+        path: 'books/info/:id', component: BookInfoComponent
+      },
+      {
+        path: '',redirectTo: 'courses', pathMatch: 'full'
       },
       {
         path: '**', component : ErrorComponent
